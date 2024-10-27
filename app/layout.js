@@ -12,12 +12,12 @@ export const metadata = {
     title: title,
     description: description,
     type: "website",
-    images: "/myGov-cobranded-logo-black.svg",
+    images: "/logo-white.svg",
   },
   icons: {
-    icon: ["/myGov-cobranded-logo-black.svg"],
-    apple: ["/myGov-cobranded-logo-black.svg"],
-    shortcut: ["/myGov-cobranded-logo-black.svg"],
+    icon: ["/logo-white.svg"],
+    apple: ["/logo-white.svg"],
+    shortcut: ["/logo-white.svg"],
   },
 };
 

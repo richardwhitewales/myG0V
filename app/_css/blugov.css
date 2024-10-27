@@ -1,31 +1,4 @@
-.confirm-action.blugov {
-  height: 50px;
-  height: 3.125rem;
-  text-decoration: none;
-  background-color: #254a7e;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  min-width: 160px;
-  background-color: #254a7e;
-}
 
-.confirm-action.blugov:hover {
-  text-decoration: none;
-  background-color: #183052;
-  color: #fff;
-}
-
-.confirm-action.blugov:focus {
-  background-color: #183052;
-  outline: 4px solid #183052;
-  outline-offset: 2px;
-}
-
-.confirm-action.blugov:disabled {
-  background-color: #a0a0a3;
-}
 
 html {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Oxygen", "Ubuntu",
@@ -1445,11 +1418,6 @@ form [type="radio"]:focus + label {
   }
 }
 
-#mygov-login-form.alternative {
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
 .digital-id-login-option-container {
   background-color: #f5f5f5;
   border-radius: 4px;
@@ -1488,7 +1456,7 @@ form [type="radio"]:focus + label {
   margin-top: 0;
 }
 
-.mygov-login-option-container {
+.login-option-container {
   background-color: #f5f5f5;
   border-radius: 4px;
   overflow: hidden;
@@ -1498,7 +1466,7 @@ form [type="radio"]:focus + label {
   margin-top: 20px;
 }
 
-.mygov-login-option-container .new-brand-rainbow {
+.login-option-container .new-brand-rainbow {
   position: relative;
   margin-top: -25px;
 }
@@ -1570,10 +1538,6 @@ form [type="radio"]:focus + label {
   height: 5px;
   display: inline-block;
   background-color: #172f52;
-}
-
-.external-links-zone span.mygovid {
-  float: unset;
 }
 
 #first-dismiss,
@@ -1842,13 +1806,6 @@ legend {
 .unauth .login-grid-container .button-back {
   margin-top: 0;
   line-height: 1.5;
-}
-
-.wrapper-mapwap #mygov-login-form.alternative,
-#inner-content #mygov-login-form.alternative,
-.unauth #mygov-login-form.alternative {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .wrapper-mapwap .help-info-button,
@@ -3169,25 +3126,25 @@ form input[type="radio"] + label {
   background: #183052;
 }
 
-img#unauth-govt-crest {
+img#unauth-crest {
   width: 100%;
   height: auto;
 }
 
-.unauth-govt-crest__link {
+.unauth-crest__link {
   width: 174px;
   width: 10.875rem;
 }
 
 @media screen and (min-width: 640px) {
-  .unauth-govt-crest__link {
+  .unauth-crest__link {
     width: 236px;
     width: 14.75rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .unauth-govt-crest__link {
+  .unauth-crest__link {
     width: 328px;
     width: 20.5rem;
     height: auto;

@@ -3789,11 +3789,6 @@ fieldset.button-group button.active {
   margin-bottom: 0;
 }
 
-.progress h1 .mygov-icon {
-  height: 1.2em;
-  margin-right: 0.1em;
-}
-
 .progress .code-gen {
   text-align: center;
 }
@@ -5830,7 +5825,7 @@ header[role="banner"].unauth .unauth-grid .header-logo.unauth {
   }
 }
 
-img#unauth-govt-crest {
+img#unauth-crest {
   float: left;
   height: 40px;
   margin-right: 1em;
@@ -5838,27 +5833,16 @@ img#unauth-govt-crest {
 }
 
 @media screen and (min-width: 576px) {
-  img#unauth-govt-crest {
+  img#unauth-crest {
     height: 48px;
     margin-right: 2em;
   }
 }
 
 @media screen and (min-width: 992px) {
-  img#unauth-govt-crest {
+  img#unauth-crest {
     margin-left: 0;
     height: 48px;
-  }
-}
-
-img#unauth-mygov-logo {
-  float: right;
-}
-
-@media screen and (min-width: 576px) {
-  img#unauth-mygov-logo {
-    float: left;
-    color: #fff;
   }
 }
 
@@ -5882,10 +5866,6 @@ img#unauth-mygov-logo {
 
 .image-float-right {
   float: right;
-}
-
-.mygovbeta-tip {
-  overflow: auto;
 }
 
 .tip-heading {
@@ -5916,10 +5896,6 @@ img#unauth-mygov-logo {
     display: block;
     margin: 1.5em auto;
     float: none;
-  }
-
-  .mygovbeta-tip {
-    text-align: center;
   }
 }
 
@@ -5966,16 +5942,6 @@ img#unauth-mygov-logo {
   background-color: #254a7e;
   color: #fff;
   text-decoration: underline;
-}
-
-.mygovbeta-tip {
-  overflow: auto;
-}
-
-@media only screen and (max-width: 992px) {
-  .mygovbeta-tip {
-    text-align: center;
-  }
 }
 
 .tip-heading {
@@ -6982,20 +6948,6 @@ ol.table-of-contents .toc-n {
   transform: rotate(-90deg);
 }
 
-img#mygov-access-conf {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-  height: 140px;
-}
-
-@media screen and (min-width: 320px) {
-  img#mygov-access-conf {
-    margin-top: 1em;
-  }
-}
-
 img#warning {
   display: block;
   margin-left: auto;
@@ -7539,16 +7491,6 @@ a.va_skipToLink:hover {
   min-width: 160px;
 }
 
-.confirm-action {
-  background-color: #222;
-  color: white;
-  min-width: 160px;
-}
-
-.confirm-action:disabled {
-  background-color: #ccc;
-}
-
 .sign-in-banner.alternative {
   font-size: 22px;
   font-weight: bold;
@@ -7865,12 +7807,6 @@ h2.digital-id-header,
 
 .external-links-zone span.identity {
   margin-bottom: 0.7em;
-}
-
-@media screen and (min-width: 576px) {
-  .external-links-zone span.mygovid {
-    float: right;
-  }
 }
 
 .link-external {
