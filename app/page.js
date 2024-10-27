@@ -109,7 +109,7 @@ export default function Home() {
                           <a className="create-account-link" href="#"
                           >Create a myGov account</a
                           >
-                          if you don't have one already.
+                          if you don&apos;t have one already.
                         </p>
                       </form>
                       <div className="hr-word">

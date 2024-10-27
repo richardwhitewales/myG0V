@@ -57,7 +57,7 @@ export default function Otp() {
                               />
                             </label>
                             <p style={{ fontSize: 14 }}>
-                              If you don't want to use Digital Identity, you can
+                              If you don&apos;t want to use Digital Identity, you can
                               <a>call the helpdesk</a> to create a new myGov
                               account.
                             </p>

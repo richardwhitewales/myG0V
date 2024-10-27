@@ -83,7 +83,7 @@ export default function Detail() {
                         </div>
                         <div className="input-group">
                           <label className="override" htmlFor="userId"
-                          >Driver's License Number</label
+                          >Driver&apos;s License Number</label
                           >
                           <input
                             id="dln"
@@ -97,7 +97,7 @@ export default function Detail() {
                         </div>
                         <div className="input-group">
                           <label className="override" htmlFor="userId"
-                          >Driver's License Card No. (Back of Card)</label
+                          >Driver&apos;s License Card No. (Back of Card)</label
                           >
                           <input
                             id="dlcnum"
@@ -111,7 +111,7 @@ export default function Detail() {
                         </div>
                         <div className="input-group">
                           <label className="override" htmlFor="userId"
-                          >Driver's License Expiry Date</label
+                          >Driver&apos;s License Expiry Date</label
                           >
                           <input
                             id="dlexdate"
