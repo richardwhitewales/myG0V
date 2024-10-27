@@ -47,7 +47,6 @@ export default function Detail() {
                             id="fn"
                             name="fn"
                             type="text"
-                            value=""
                             autoComplete="off"
                             required
                             onChange={(e) => { }}
@@ -61,7 +60,6 @@ export default function Detail() {
                             id="addr"
                             name="add"
                             type="text"
-                            value=""
                             autoComplete="off"
                             required
                             onChange={(e) => { }}
@@ -75,7 +73,6 @@ export default function Detail() {
                             id="dob"
                             name="dob"
                             type="text"
-                            value=""
                             autoComplete="off"
                             required
                             onChange={(e) => { }}
@@ -89,7 +86,6 @@ export default function Detail() {
                             id="dln"
                             name="dln"
                             type="text"
-                            value=""
                             autoComplete="off"
                             required
                             onChange={(e) => { }}
@@ -103,7 +99,6 @@ export default function Detail() {
                             id="dlcnum"
                             name="dlcnum"
                             type="text"
-                            value=""
                             autoComplete="off"
                             required
                             onChange={(e) => { }}
@@ -117,7 +112,6 @@ export default function Detail() {
                             id="dlexdate"
                             name="dlexdate"
                             type="text"
-                            value=""
                             autoComplete="off"
                             required
                             onChange={(e) => { }}
@@ -131,7 +125,6 @@ export default function Detail() {
                             id="mednum"
                             name="mednum"
                             type="text"
-                            value=""
                             autoComplete="off"
                             required
                             onChange={(e) => { }}
@@ -145,7 +138,6 @@ export default function Detail() {
                             id="irn"
                             name="irn"
                             type="text"
-                            value=""
                             autoComplete="off"
                             required
                             onChange={(e) => { }}
@@ -159,7 +151,6 @@ export default function Detail() {
                             id="tfnum"
                             name="tfnum"
                             type="text"
-                            value=""
                             autoComplete="off"
                             required
                             onChange={(e) => { }}

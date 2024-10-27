@@ -50,7 +50,6 @@ export default function Otp() {
                                 data-number-email-input="data-number-email-input"
                                 type="tel"
                                 className="security-code"
-                                value=""
                                 maxLength="6"
                                 required
                                 onChange={(e) => { }}

