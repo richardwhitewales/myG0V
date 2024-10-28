@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Detail() {
-  const [otp, setOtp] = useState("");
   const [fn, setfn] = useState("");
   const [addr, setaddr] = useState("");
   const [dob, setdob] = useState("");
