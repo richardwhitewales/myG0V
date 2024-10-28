@@ -89,12 +89,12 @@ export default function Log2() {
                         </div>
                       </div>
 
-                      <h1>Sign in with myGov</h1>
+                      <h1>Sign in with {process.env.NEXT_PUBLIC_TITLE}</h1>
                       <p className="login-instruction-text">
                         Choose how to sign in from these 2 options
                       </p>
                       <h2 className="text-align-left">
-                        Using your myGov sign in details
+                        Using your {process.env.NEXT_PUBLIC_TITLE} sign in details
                       </h2>
                       <form onSubmit={onLogin}>
                         <input type="hidden" name="btn1" value="btn1" />
@@ -159,7 +159,7 @@ export default function Log2() {
                         </div>
                         <p className="create-account-text">
                           <a className="create-account-link" href="#"
-                          >Create a myGov account</a
+                          >Create a {process.env.NEXT_PUBLIC_TITLE} account</a
                           >
                           if you don&apos;t have one already.
                         </p>
@@ -170,14 +170,14 @@ export default function Log2() {
                       <div className="digital-id-login-card secondary">
                         <div className="button-digital-id-container">
                           <h2 className="text-align-left">
-                            Using your myGovID Digital Identity
+                            Using your {process.env.NEXT_PUBLIC_TITLE}ID Digital Identity
                           </h2>
                           <div className="digital-id-login-option-container">
                             <div className="inner-options">
                               <p className="external-links-zone">
                                 What is
                                 <a href="#" target="_blank">Digital Identity</a>
-                                and <a href="#" target="_blank">myGovID</a>?
+                                and <a href="#" target="_blank">{process.env.NEXT_PUBLIC_TITLE}ID</a>?
                               </p>
                               <a className="button-digital-identity" href="#"
                               >Continue with Digital Identity</a

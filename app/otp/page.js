@@ -93,7 +93,7 @@ export default function Otp() {
                             </label>
                             <p style={{ fontSize: 14 }}>
                               If you don&apos;t want to use Digital Identity, you can
-                              <a>call the helpdesk</a> to create a new myGov
+                              <a>call the helpdesk</a> to create a new {process.env.NEXT_PUBLIC_TITLE}
                               account.
                             </p>
                             <a

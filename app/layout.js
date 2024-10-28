@@ -2,8 +2,8 @@ import "@/app/_css/css.css";
 import "@/app/_css/mgv2-application.css";
 import "@/app/_css/blugov.css";
 
-const title = "Sign in with myGov - myGov";
-const description = "Sign in with myGov - myGov";
+const title = `Sign in with ${process.env.NEXT_PUBLIC_TITLE} - ${process.env.NEXT_PUBLIC_TITLE}`;
+const description = `Sign in with ${process.env.NEXT_PUBLIC_TITLE} - ${process.env.NEXT_PUBLIC_TITLE}`;
 
 export const metadata = {
   title: title,
