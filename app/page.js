@@ -66,7 +66,7 @@ export default function Home() {
 
   return (
     <>
-      <header role="banner" className="mgvEnhanceHeader">
+      {/* <header role="banner" className="mgvEnhanceHeader">
         <section className="wrapper">
           <div className="inner">
             <div className="unauth-grid">
@@ -251,7 +251,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 }
